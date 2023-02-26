@@ -1,0 +1,41 @@
+La classe Vehicule
+Définissez une classe Vehicule qui a pour attributs des informations valables pour tout type de véhicule :
+
+- sa marque ;
+- sa date d'achat ;
+- son prix d'achat ;
+
+Définissez un constructeur prenant en paramètre les trois attributs correspondant à la marque, la date d'achat et le prix d'achat. Le prix courant sera calculé plus tard.
+
+Définissez une méthode publique void affiche() qui affiche l'état de l'instance, c'est-à-dire la valeur de ses attributs.
+
+La classe Voiture et la classe Avion
+Définissez deux classes Voiture et Avion, héritant de la classe Vehicule et ayant les attributs supplémentaires suivants :
+
+Pour la classe Voiture :
+
+* sa cylindrée ;
+* son nombre de portes ;
+* sa puissance ;
+* son kilométrage.
+
+Pour la classe Avion :
+
+son type de moteur ("HELICES" ou autre, nous utiliserons "REACTION" pour les exemples) ;
+son nombre d'heures de vol.
+Définissez, pour chacune de ces classes, un constructeur permettant l'initialisation explicite de l'ensemble des attributs, ainsi qu'une méthode affichant la valeur des attributs. Constructeurs et méthodes d'affichage devront utiliser les méthodes appropriées de la classe parente !
+
+Encore des méthodes
+Ajoutez une méthode float calculePrix(int anneActuelle) dans la classe Vehicule qui, à ce niveau, fixe le prix courant au prix d'achat moins 1% par année (entre la date d'achat et la date actuelle).
+
+
+Pour une voiture, le prix courant est égal au prix d'achat, moins :
+2% pour chaque année depuis l'achat jusqu'à la date actuelle
+5% pour chaque tranche de 10000km parcourus (on arrondit à la tranche la plus proche)
+10% s'il s'agit d'un véhicule de marque "Renault" ou "Fiat" (ou d'autres marques de votre choix)
+et plus 20% s'il s'agit d'un véhicule de marque "Ferrari" ou "Porsche" (idem).
+Pour un avion, le prix courant est égal au prix d'achat, moins :
+
+10 % pour chaque tranche de 100 heures de vol s'il s'agit d'un avion à hélices.
+10 % pour chaque tranche de 1000 heures de vol pour les autres types de moteurs.
+Le prix doit rester positif (donc s'il est négatif, on le met à 0).
